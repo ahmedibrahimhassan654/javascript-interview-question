@@ -6,8 +6,9 @@
 
 const palindroom=(word)=>{
     /*
-    1-change string to array//split()
+    1-change string to array//split('')
     2-reverse string
+    //conver to original//join('')
     3-check if it is equal to original
      */
 const wordToarray=word.split('')
