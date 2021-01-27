@@ -1,16 +1,30 @@
 // Complete the repeatedString function below.
 function repeatedString(s, n) {
-    const totalarray=[]
-    let numberofa=0
-    const total=s.repeat(n)
-    totalarray.push(...total)
+    //aba,aba,aba,a
+  
+//هجيب اقل قيمه هترجع اما اقسم n/s.length
+const substring=Math.floor(n/s.length)//3
 
-    totalarray.map(e=>{
-        if(e==='a'){
-            numberofa++
-        }
-    })
-    console.log(numberofa);
+const numberofAinsubstring=(s.match(/a/g)||[]).length//2
+
+const reminder=n%s.length
+const remenderofA=s
+.split('')
+.slice(0,reminder)
+.filter((e)=>e==='a').length
+if(n%s.length===0){
+    return  substring*numberofAinsubstring
+    //console.log(substring*numberofAinsubstring);
+
+}else{
+    return  substring*numberofAinsubstring+remenderofA
+  //  console.log(substring*numberofAinsubstring+remenderofA);
 }
 
-repeatedString('abc',10)
+// console.log(remenderofA);
+// console.log(reminder);
+}
+  
+
+
+repeatedString('aba',11)//expexted output 7
